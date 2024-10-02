@@ -1,0 +1,25 @@
+This file contains the steps taken to execute the project
+
+1) Plan:
+a) Frontend features
+
+The front end will have follwong tabs
+Navaigation bar : on all pages
+Footer : on all pages (this will contain logo and social media on keft, in middle addrss and phone and on right the hours). Add a copyright at the bottom
+On navigation bar we have below options:
+Home (can combine About us here) : home will have an main image with carrousal of foods and welcome message and little intro about Atil. with more images on bottom (4 sections), food  Experience section followed by footer
+Menu : tabs on top for different categories and on click on category shows list of items with add to cart button
+Catering: services we offer and an form for enquiry 
+About us : Fine Dining explanation. Can combine this in Home page itself
+Contact : add location on left and form on the right. add map at the bottom
+Dine in : this should show the  form or options to select timing and reserve a spot or can reserve through phone
+Cart : add all the items that were selected here -> clicking this hould open checkout option(check stripe for this)
+phone number :this should be large and easy to find
+
+
+
+
+
+=======================================================
+
+b) Backend features
