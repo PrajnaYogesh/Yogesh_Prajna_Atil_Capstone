@@ -52,7 +52,13 @@ write the base code, add port and see if the server is up and running
 create connectToDB file and do connection to mongo db. initiate the connectToDB in index.js
 also add dotenv.config in index.js
 
-4)
+4)installed bcrypt
+
+5) created models,routers and controllers folder and their corresponding files
+
+6) created the login,sign up in controller. used bcrypt to hash the password
+
+7) completed the coding part for signup and login, testing them using postman and it works
 
 
 

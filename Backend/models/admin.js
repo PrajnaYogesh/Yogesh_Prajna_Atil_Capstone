@@ -12,8 +12,8 @@ const adminSchema = new mongoose.Schema({
     password :{
         type:String,
         required:true
-    } ,
-    items: [{type:mongoose.Schema.Types.ObjectId,ref:'Menu'}] //to display items to the admin to edit
+    } 
+    // items: [{type:mongoose.Schema.Types.ObjectId,ref:'Menu'}] //to display items to the admin to edit
 
 },{timestamps:true});
 
