@@ -50,15 +50,31 @@ write the base code, add port and see if the server is up and running
 
 3) add config folder, add the mongo db url with the database name at the end .  
 create connectToDB file and do connection to mongo db. initiate the connectToDB in index.js
-also add dotenv.config in index.js
+also add dotenv.config in index.js. 
 
-4)installed bcrypt
+4) created folders for controllers ,models,routers
 
-5) created models,routers and controllers folder and their corresponding files
+5)in models => created schema . This Schema will not reflect in atlas mongodb unless an CRUD method is done.
 
-6) created the login,sign up in controller. used bcrypt to hash the password
+6)installed bcrypt
 
-7) completed the coding part for signup and login, testing them using postman and it works
+7) In admin controller => created the login,sign up in controller. used bcrypt  hash and compare to encrypt ,decrypt the password
+completed the coding part for signup and login, testing them using postman and it works
+
+8) lets now set up cloudinary and work on the menu controller
+
+Cloudinary :
+first store the 3 values in .env
+CLOUDINARY_CLOUD_NAME
+CLOUDINARY_API_KEY
+CLOUDINARY_API_SECRET
+
+now import these in index.js and also add the cloudinary configuration
+You are now good to store images in cloudinary using the controllers
+
+9) create controller for the menu
+import cloudinary and the menu model and create the required crud methods here. use cloudinary wherever required here to store images to cloudinary
+
 
 
 

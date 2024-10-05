@@ -1,6 +1,6 @@
 const Admin = require('../models/admin')
 const bcrypt = require('bcrypt')
-
+const jwt = require("jsonwebtoken");
 const signupController = async(req,res) =>{
 
     try {
