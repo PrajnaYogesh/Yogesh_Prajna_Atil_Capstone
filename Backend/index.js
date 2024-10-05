@@ -42,9 +42,9 @@ app.use('/admin',adminRouter)
 app.use('/menu',menuRouter)
 
 
-app.get('/',(req,res)=>{
-    res.send('Hello there')
-})
+// app.get('/',(req,res)=>{
+//     res.send('Hello there')
+// })
 
 
 app.listen(PORT,()=>{

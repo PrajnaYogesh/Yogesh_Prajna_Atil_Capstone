@@ -18,6 +18,11 @@ const storage = new CloudinaryStorage({
 const upload = multer({ storage });
 
 router.post('/create',upload.single('itemImage'),menuController.createAnItemController);
+router.put('/edit',upload.single('itemImage'),menuController.editAnMenuItemController);
+router.delete('/delete/:id',menuController.deleteAnMenuItemController);
+router.get('/:id',menuController.getAnMenuItemController)
+router.get('/',menuController.getAllItemsController)
+
 
 
 module.exports = router;

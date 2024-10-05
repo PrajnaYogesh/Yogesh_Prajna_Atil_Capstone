@@ -63,18 +63,37 @@ completed the coding part for signup and login, testing them using postman and i
 
 8) lets now set up cloudinary and work on the menu controller
 
+get below details from cloudinary and also create a folder in cloudinary and set the secret api's in .env
 Cloudinary :
 first store the 3 values in .env
 CLOUDINARY_CLOUD_NAME
 CLOUDINARY_API_KEY
 CLOUDINARY_API_SECRET
 
-now import these in index.js and also add the cloudinary configuration
-You are now good to store images in cloudinary using the controllers
 
 9) create controller for the menu
 import cloudinary and the menu model and create the required crud methods here. use cloudinary wherever required here to store images to cloudinary
 
+10.Setting up cloudinary
+npm instal multer multer-storage-cloudinary
+
+if it throws error then uninstall cloudinary
 
 
+11.in index.js
+app.use(express.json({limit:"150mb"}))
+
+12.create a file cloudinaryConfig.js
+
+13. in its corresponding router,create storage, import all the required,in router pass the image column name between path and controller
+
+14.In controller add the cloudinary ping to see if its connecting
+take the image as file
+add the upload code to add the string from controller to cloudinary
+
+
+15: in postman while you test adding the image
+body -> form-data ->for image select file (key) -> others select text -> take image from your computer(value)
+
+16. the image upload is successful,image is created in cloudinary and also in mongodb
 
