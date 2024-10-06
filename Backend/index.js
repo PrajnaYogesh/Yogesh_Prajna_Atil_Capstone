@@ -7,8 +7,11 @@ const connectToDB = require('./config/connectToDB')
 connectToDB();
 const adminRouter = require('./routers/adminRouter')
 const menuRouter = require('./routers/menuRouter')
+const cartRouter = require('./routers/cartRouter')
 // const cookieParser = require('cookie-parser')
-// const cors=require('cors')
+const bodyParser = require('body-parser');
+const cors=require('cors')
+
 
 
 // //Cloudinary configuration
@@ -31,6 +34,9 @@ const menuRouter = require('./routers/menuRouter')
 // Middleware
 //to access json in body and take in a limit for image
 app.use(express.json({limit:"150mb"}))
+// Middleware
+// app.use(cors());
+app.use(bodyParser.json());
 
 
 
@@ -40,7 +46,7 @@ app.use(express.json({limit:"150mb"}))
 //admin route - signup and login
 app.use('/admin',adminRouter)
 app.use('/menu',menuRouter)
-// app.use('/checkout',)
+app.use('/cart',cartRouter)
 
 // app.get('/',(req,res)=>{
 //     res.send('Hello there')

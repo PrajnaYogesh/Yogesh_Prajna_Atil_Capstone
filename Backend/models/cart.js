@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { v4: uuidv4 } = require('uuid');
 
 // Define the CartItem schema
 const CartItemSchema = new mongoose.Schema({
@@ -9,8 +10,7 @@ const CartItemSchema = new mongoose.Schema({
 
 // Define the Cart schema
 const CartSchema = new mongoose.Schema({
-    customerName: { type: String, required: true },
-    phone: { type: String, required: true },
+    cartId: { type: String, required: true, unique: true },
     items: [CartItemSchema],
     totalAmount: { type: Number, default: 0 }
 });
@@ -26,4 +26,3 @@ CartSchema.methods.calculateTotalAmount = function () {
 const Cart = mongoose.model('Cart', CartSchema);
 
 module.exports = Cart;
-
