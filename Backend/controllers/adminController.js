@@ -4,6 +4,8 @@ const jwt = require("jsonwebtoken");
 const {success,error} = require('../utils/responseWrapper')
 
 
+
+// Signup
 const signupController = async(req,res) =>{
 
     try {
@@ -14,7 +16,7 @@ const signupController = async(req,res) =>{
         }
         const oldAdmin = await Admin.findOne({email});
         if(oldAdmin){
-            return res.send(error(400,"Admin with this email already registered, try using another email"));
+            return res.send(error(409,"Admin with this email already registered, try using another email"));
         }
                   const hashedPassword = await bcrypt.hash(password,10);
               const admin = await Admin.create({name,email,password:hashedPassword});
@@ -37,6 +39,8 @@ const signupController = async(req,res) =>{
 }
 
 
+
+//Login 
 const loginController = async(req,res) =>{
     try {
         const {email,password} = req.body;
@@ -54,9 +58,18 @@ const admin = await Admin.findOne({email}).select('+password') //get the passwor
     return res.send(error(403,'Password is incorrect'));
  }
 
- return res.send(success(200,'Login successfull'))
+// generating Access Token, call generateAccessToken method
+const accessToken = generateAccessToken({
+    _id: admin._id
+})
 
- //generate access token,refresh token ,cookie parser,jwt later
+//generate refresh token ,cookie parser,jwt later
+
+
+//  return res.send(success(200,'Login successfull'))
+return res.send(success(200,{accessToken}))
+
+ 
 
     }  catch (e) {
         return res.send(error(500,e.message))
@@ -64,5 +77,18 @@ const admin = await Admin.findOne({email}).select('+password') //get the passwor
 }
 
 
+
+
+// Generate the access token
+const generateAccessToken = (data) =>{
+    try {
+        const token = jwt.sign(data , process.env.ACCESS_TOKEN_PRIVATE_KEY,{
+            expiresIn: "1d",
+        });
+        return token;
+    } catch (error) {
+        console.log('there was error generating access token')
+    }
+}
 
 module.exports = {signupController,loginController}

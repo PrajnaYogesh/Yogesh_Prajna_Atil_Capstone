@@ -1,10 +1,9 @@
-
 const router = require('express').Router();
 const menuController = require('../controllers/menuController')
 const multer = require('multer');
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
 const cloudinary = require('../cloudinaryConfig');
-
+const requireUser = require("../middleware/requireUser");
 
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
@@ -17,9 +16,9 @@ const storage = new CloudinaryStorage({
 
 const upload = multer({ storage });
 
-router.post('/create',upload.single('itemImage'),menuController.createAnItemController);
-router.put('/edit',upload.single('itemImage'),menuController.editAnMenuItemController);
-router.delete('/delete/:id',menuController.deleteAnMenuItemController);
+router.post('/create', requireUser,upload.single('itemImage'),menuController.createAnItemController);
+router.put('/edit',requireUser,upload.single('itemImage'),menuController.editAnMenuItemController);
+router.delete('/delete/:id',requireUser,menuController.deleteAnMenuItemController);
 router.get('/:id',menuController.getAnMenuItemController)
 router.get('/',menuController.getAllItemsController)
 

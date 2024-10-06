@@ -19,7 +19,7 @@ cloudinary.api.ping()
 const createAnItemController = async( req,res) =>{
    
      try{
-        //  const owner = req._id;
+        //   const owner = req._id;
        
         const {itemName,itemDescription,price,category,type} =req.body;
 const itemImage=req.file;
