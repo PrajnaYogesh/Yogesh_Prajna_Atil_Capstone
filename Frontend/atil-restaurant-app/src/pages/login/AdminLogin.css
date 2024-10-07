@@ -5,7 +5,7 @@
     align-items: center;
 
 
-    background-image: url('https://www.shutterstock.com/shutterstock/videos/1032059579/thumb/1.jpg?ip=x480');
+    background-image: url('https://img.freepik.com/premium-photo/free-indian-flower-pattern-rangoli-background_1264014-27149.jpg');
     background-size: cover;  /*This makes the image cover the entire screen */ 
     background-position: center; /* This centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -44,7 +44,7 @@ input{
 
 
 .submit{
-    background-color: #3a1067;
+    background-color: #040434;
     color: white;
     border: none;
     margin-top: 16px;
@@ -53,7 +53,7 @@ input{
 }
 
 .submit:hover{
-    background-color: #6a21b9;
+    background-color: #101087;
   
 }
 

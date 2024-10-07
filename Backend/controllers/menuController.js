@@ -129,8 +129,8 @@ const getAnMenuItemController = async(req,res)=>{
         }
         return res.send(success(200, item));
 
-    } catch (error) {
-        
+    } catch (e) {
+        return res.send(error(500, e.message));
     }
 }
 
@@ -139,13 +139,14 @@ const getAnMenuItemController = async(req,res)=>{
 const getAllItemsController= async(req,res)=>{
     try {
                const items = await Menu.find();
+            //    console.log("here")
         if(!items){
             return res.send(error(404, "Item not found!"));
         }
         return res.send(success(200, items));
 
-    } catch (error) {
-        
+    } catch (e) {
+        return res.send(error(500, e.message));
     }
 }
 

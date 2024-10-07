@@ -1,0 +1,39 @@
+
+.adminbodyOuterContainer{
+    width: 100%;
+    border: 1px solid green;
+    
+}
+
+.addOuterContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+.clickBtn{
+    background-color: #040434;
+    color: rgb(216, 207, 100);
+    border: none;
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: medium;
+
+    min-width:200px;
+    padding:15px;
+    border:1px solid black;
+    border-radius: 40px;
+    
+    
+}
+
+.clickBtn:hover{
+    background-color: #101087;
+  
+}
+
+.itemsOuterContainer{
+    border: 2px solid rgb(182, 27, 53);
+}

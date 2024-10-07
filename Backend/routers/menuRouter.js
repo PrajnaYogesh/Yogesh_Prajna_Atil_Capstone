@@ -15,12 +15,12 @@ const storage = new CloudinaryStorage({
 
 
 const upload = multer({ storage });
-
+router.get('/',menuController.getAllItemsController)
+router.get('/:id',menuController.getAnMenuItemController)
 router.post('/create', requireUser,upload.single('itemImage'),menuController.createAnItemController);
 router.put('/edit',requireUser,upload.single('itemImage'),menuController.editAnMenuItemController);
 router.delete('/delete/:id',requireUser,menuController.deleteAnMenuItemController);
-router.get('/:id',menuController.getAnMenuItemController)
-router.get('/',menuController.getAllItemsController)
+
 
 
 
