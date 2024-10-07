@@ -1,34 +1,10 @@
 This file contains the steps taken to execute the project
 
 1) Plan:
-a) Frontend features
 
-The front end will have follwong tabs
-Navaigation bar : on all pages
-Footer : on all pages (this will contain logo and social media on keft, in middle addrss and phone and on right the hours). Add a copyright at the bottom
-On navigation bar we have below options:
-Home (can combine About us here) : home will have an main image with carrousal of foods and welcome message and little intro about Atil. with more images on bottom (4 sections), food  Experience section followed by footer
-Menu : tabs on top for different categories and on click on category shows list of items with add to cart button
-Catering: services we offer and an form for enquiry 
-About us : Fine Dining explanation. Can combine this in Home page itself
-Contact : add location on left and form on the right. add map at the bottom
-Dine in : this should show the  form or options to select timing and reserve a spot or can reserve through phone
-Cart : add all the items that were selected here -> clicking this hould open checkout option(check stripe for this)
-phone number :this should be large and easy to find
+A) ========================================  BACK END  ====================================
 
-
-Admin page:
- 
- signup and login page for Admin -> when user logs in should take to the same website,but also an tab to add new items
-all recipes should also show an  edit button.(this should be visible only to the admin). when you click on edit,it should open a pop up with all the details. you can edit and save it. on save it should be updated everywhere
-
-use jwt,bcrypt here,tokens also
-
-
-
-=======================================================
-
-b) Backend features
+Backend features
 
 user table (here admin details stored)
 
@@ -96,4 +72,57 @@ add the upload code to add the string from controller to cloudinary
 body -> form-data ->for image select file (key) -> others select text -> take image from your computer(value)
 
 16. the image upload is successful,image is created in cloudinary and also in mongodb
+
+17. created access token. using jwt sign,verify and also a secret key in the .env
+
+18. created cart model to store the order.
+installed uuid  to generate cart id for each user purchase . will store this in users local storage and installed body parser
+
+
+19.completed the backend. Moving on to front end
+
+
+========================================  FRONT END  ====================================
+
+B) Frontend features
+
+The front end will have follwong tabs
+Navaigation bar : on all pages
+Footer : on all pages (this will contain logo and social media on keft, in middle addrss and phone and on right the hours). Add a copyright at the bottom
+On navigation bar we have below options:
+Home (can combine About us here) : home will have an main image with carrousal of foods and welcome message and little intro about Atil. with more images on bottom (4 sections), food  Experience section followed by footer
+Menu : tabs on top for different categories and on click on category shows list of items with add to cart button
+Catering: services we offer and an form for enquiry 
+About us : Fine Dining explanation. Can combine this in Home page itself
+Contact : add location on left and form on the right. add map at the bottom
+Dine in : this should show the  form or options to select timing and reserve a spot or can reserve through phone
+Cart : add all the items that were selected here -> clicking this hould open checkout option(check stripe for this)
+phone number :this should be large and easy to find
+
+
+Admin page:
+ 
+ signup and login page for Admin -> when user logs in should take to the same website,but also an tab to add new items
+all recipes should also show an  edit button.(this should be visible only to the admin). when you click on edit,it should open a pop up with all the details. you can edit and save it. on save it should be updated everywhere
+
+use jwt,bcrypt here,tokens also
+
+
+steps front end:
+1) install the react app using vite
+
+npm create vite@latest
+select react
+select javascript
+
+follow the 3 commands given there -> cd, install and run dotenv
+
+2) install required dependencies -> axios, react-router-dom , react-icons 
+
+3) wrap main.jsx in <BrowserRouter> 
+
+4) added the proxy in package.json
+
+
+
 
