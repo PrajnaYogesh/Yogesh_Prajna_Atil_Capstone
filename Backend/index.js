@@ -36,6 +36,13 @@ const cors=require('cors')
 app.use(express.json({limit:"150mb"}))
 // Middleware
 // app.use(cors());
+
+app.use(cors({
+    origin:true,
+    credentials: true
+  }))
+
+  
 app.use(bodyParser.json());
 
 

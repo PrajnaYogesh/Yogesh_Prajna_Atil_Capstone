@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import {  Route, Routes } from 'react-router-dom';
 import './App.css'
-import CustomerPage from './pages/CustomerPage';
-import AdminSignup from './pages/AdminSignup';
-import AdminLogin from './pages/AdminLogin';
-import AdminDashboard from './pages/AdminDashboard';
+import CustomerPage from './pages/customerPage/CustomerPage';
+import AdminSignup from './pages/signup/AdminSignup';
+import AdminLogin from './pages/login/AdminLogin';
+import AdminDashboard from './pages/adminDashboard/AdminDashboard';
 
 function App() {
   

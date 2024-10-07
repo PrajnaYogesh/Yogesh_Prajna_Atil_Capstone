@@ -51,4 +51,10 @@
   width: 100vw;
   height: 100vh;
   border: 2px solid red;
+  background-image: url('https://img.freepik.com/free-vector/cool-blue-parchment_53876-86280.jpg');
+  background-size: cover; /* This makes the image cover the entire screen */
+  background-position: center; /* This centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100vh; /* Makes the body take up the full height of the viewport */
+  margin: 0; /* Removes default margin */
 }
