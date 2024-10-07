@@ -5,6 +5,14 @@
     align-items: center;
 
 
+    background-image: url('https://www.shutterstock.com/shutterstock/videos/1032059579/thumb/1.jpg?ip=x480');
+    background-size: cover;  /*This makes the image cover the entire screen */ 
+    background-position: center; /* This centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Makes the body take up the full height of the viewport */
+    margin: 0; 
+}
+
     .heading{
         text-align: center;
     }
@@ -35,7 +43,7 @@ input{
 
 
 .submit{
-    background-color: #29b4ff;
+    background-color: #3a1067;
     color: white;
     border: none;
     margin-top: 16px;
@@ -44,7 +52,7 @@ input{
 }
 
 .submit:hover{
-    background-color: #249dde;
+    background-color: #6a21b9;
   
 }
 
@@ -52,4 +60,3 @@ input{
     margin-top: 16px;
 }
 
-}

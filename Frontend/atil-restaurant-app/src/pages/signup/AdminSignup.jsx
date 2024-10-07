@@ -35,14 +35,14 @@ console.log(result)
         <form onSubmit={handleSubmit}>
 
 <label htmlFor="name"> Name </label>
-<input className="name" id="name" type="text" onChange={(e) => setName(e.target.value)} />
+<input className="name" id="name" required="true" type="text" onChange={(e) => setName(e.target.value)} />
 
 <label htmlFor='email'> Email </label>
-<input className='email' type="email"  id="email" onChange={(e)=> setEmail(e.target.value) }/>
+<input className='email' type="email" required="true"  id="email" onChange={(e)=> setEmail(e.target.value) }/>
 
 
 <label htmlFor="password"> Password </label>
-<input className='password' type="password" id="password" onChange={(e)=> setPassword(e.target.value)}/>
+<input className='password' type="password" required="true" id="password" onChange={(e)=> setPassword(e.target.value)}/>
 
 <input type="submit" className='submit'/>
         </form>

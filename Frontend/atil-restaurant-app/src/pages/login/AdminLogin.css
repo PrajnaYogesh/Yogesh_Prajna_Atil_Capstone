@@ -1,0 +1,63 @@
+.Login{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-image: url('https://www.shutterstock.com/shutterstock/videos/1032059579/thumb/1.jpg?ip=x480');
+    background-size: cover;  /*This makes the image cover the entire screen */ 
+    background-position: center; /* This centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Makes the body take up the full height of the viewport */
+    margin: 0; 
+
+}
+
+    .heading{
+        text-align: center;
+    }
+
+.login-box{
+    min-width:400px;
+    padding:40px;
+    border:1px solid black;
+    border-radius: 4px;
+}
+
+label,input{
+    display:block;
+    width: 100%;
+margin-block: 8px;
+
+}
+
+label{
+    font-weight: bold;
+}
+
+input{
+    padding :8px 16px;
+    border-radius: 4px;
+    border:1px solid black;
+}
+
+
+.submit{
+    background-color: #3a1067;
+    color: white;
+    border: none;
+    margin-top: 16px;
+    font-weight: bold;
+
+}
+
+.submit:hover{
+    background-color: #6a21b9;
+  
+}
+
+.subheading{
+    margin-top: 16px;
+}
+
