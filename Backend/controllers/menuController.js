@@ -55,25 +55,17 @@ const editAnMenuItemController = async(req,res)=>{
 try {
     const {_id,itemName,itemDescription,price,category,type} =req.body;
     const itemImage=req.file;
-
+console.log("here")
+console.log(req.body);
     const item = await Menu.findById(_id);
-
+console.log("item from backend is ")
+console.log(item)
     if(!item){
         return res.send(error(404,"Item not found!"));
     }
    
     const cloudImg = await cloudinary.uploader.upload(itemImage.path);
-//     const menu  = await Menu.create({
-//            itemName,
-//       itemDescription,
-//       price,
-//       category,
-//       type, 
-//       itemImage:{
-//           url:cloudImg.secure_url,
-//           publicId:cloudImg.public_id
-//       }
-//    })
+
 item.itemName = itemName;
 item.itemDescription=itemDescription;
 item.price =price;

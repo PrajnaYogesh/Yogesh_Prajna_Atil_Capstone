@@ -58,7 +58,7 @@
     /* border: 1px solid red; */
     color: #040434;
     font-size: 1.1rem;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .twinbtn{
@@ -78,5 +78,11 @@
  border: none;
  /* margin-top: 16px; */
  font-weight: bold;
- padding: 2px;
+ padding: 5px;
+ border-radius: 5px;
+}
+
+.twinBtnStyl:hover{
+    background-color: #101087;
+    
 }
