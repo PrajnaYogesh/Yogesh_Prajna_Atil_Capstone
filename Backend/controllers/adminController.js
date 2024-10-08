@@ -91,4 +91,9 @@ const generateAccessToken = (data) =>{
     }
 }
 
-module.exports = {signupController,loginController}
+
+const logoutController = async(req,res) =>{
+
+}
+
+module.exports = {signupController,loginController,logoutController}
