@@ -142,7 +142,28 @@ const getAllItemsController= async(req,res)=>{
     }
 }
 
+// =================get items based on category=================
+const getItemsOnCategoryController = async (req, res) => {
+    const { category } = req.params; // Assuming category is passed as a URL parameter
+
+    try {
+        // Fetch items that match the provided category
+        const items = await Menu.find({ category });
+
+        if (!items || items.length === 0) {
+            return res.send(error(404, "No items found for this category!"));
+        }
+
+        return res.send(success(200, items));
+
+    } catch (e) {
+        return res.send(error(500, e.message));
+    }
+};
+
+
+
 
 module.exports= {
-    createAnItemController,editAnMenuItemController,deleteAnMenuItemController,getAnMenuItemController,getAllItemsController
+    createAnItemController,editAnMenuItemController,deleteAnMenuItemController,getAnMenuItemController,getAllItemsController,getItemsOnCategoryController
 }
