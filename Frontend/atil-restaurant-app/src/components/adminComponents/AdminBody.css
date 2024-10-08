@@ -36,4 +36,47 @@
 
 .itemsOuterContainer{
     border: 2px solid rgb(182, 27, 53);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.eachItem{
+    border: 1px solid #040434;
+    width: 20%;
+    margin: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.pstyle{
+    width: 60%;
+    /* border: 1px solid red; */
+    color: #040434;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.twinbtn{
+    /* border: 1px solid black; */
+ padding: 2px;
+ width: 30%;
+ margin: 0px 5px;
+ display: flex;
+ justify-content: space-around;
+ 
+ 
+}
+.twinBtnStyl{
+    margin: 0px 2px;
+    background-color: #040434;
+ color: white;
+ border: none;
+ /* margin-top: 16px; */
+ font-weight: bold;
+ padding: 2px;
 }
