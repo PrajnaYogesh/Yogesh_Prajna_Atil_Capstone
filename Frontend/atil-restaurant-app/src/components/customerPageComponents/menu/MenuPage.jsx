@@ -46,12 +46,36 @@ function MenuPage() {
 
 <div className="eachItemsOuterContainer">
 
-<h3>{activeType.charAt(0).toUpperCase() + activeType.slice(1)} Menu</h3>
-        <ul>
+<h3 className='menuHeadingStyle'>{activeType.charAt(0).toUpperCase() + activeType.slice(1)} Menu</h3>
+       
+       
+       
+        <div className='menuContainer'>
           {filteredItems.map(item => (
-            <li key={item._id}>{item.itemName}</li> // Adjust properties as necessary
+            <div className='eachItemContainer' key={item._id}>
+              <img  className="itemImageStyle" src={item.itemImage.url} alt="" />
+              
+              <div className="itemDetils">
+              <p>{item.itemName}</p> 
+              <p>{item.itemDescription}</p> 
+              <p>{item.price}</p>
+
+<div className="addToCart">
+  <button>Add To Cart</button>
+  
+  <div className="plusMinus">
+  <button> - </button>
+  <span>1</span>
+  <button> + </button>
+  </div>
+</div>
+
+              </div>
+           
+
+              </div> // Adjust properties as necessary
           ))}
-        </ul>
+        </div>
 
 
 </div>
