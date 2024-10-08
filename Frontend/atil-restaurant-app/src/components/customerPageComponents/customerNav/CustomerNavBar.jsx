@@ -5,13 +5,13 @@ import {Link} from 'react-router-dom'
 function CustomerNavBar() {
   return (
 
-<nav class="custNavOuterContainer">
+<nav className="custNavOuterContainer">
 
-    <div class="custatilLogo">
+    <div className="custatilLogo">
         <img className='imageStyle' src="/atil.png" alt="Logo" />
     </div>
 
-    <div class="cust-nav-links ">
+    <div className="cust-nav-links ">
         <Link className='cust-clickBtn' to="/">Home</Link>
         <Link  className='cust-clickBtn' to="/menu">Menu</Link>
         <Link  className='cust-clickBtn' to="/contact">Contact Us</Link>
