@@ -63,5 +63,43 @@
     width: 50%;
 }
 
+.itemDetils{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:4px;
+    font-weight: 550;
+   color:#040434;
+}
+
+.addToCart{
+   width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid grey; */
+}
+
+.add-clickBtn{
+    background-color: #040434;
+    color: rgb(216, 207, 100);
+    border: none;
+    font-weight: bold;
+    font-size: 0.7rem;
+    padding:4px;
+    /* border:1px solid rgb(186, 11, 11); */
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.add-clickBtn:hover{
+    background-color: #101087; 
+}
 
 
+
+.spanStyle{
+    padding: 5px;
+}
