@@ -1,4 +1,5 @@
 import React from 'react'
+import './CustomerFooter.css'
 
 function CustomerFooter() {
   return (

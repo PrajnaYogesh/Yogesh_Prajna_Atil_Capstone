@@ -1,11 +1,11 @@
 import React from 'react'
-import CustomerNavBar from '../../components/customerPageComponents/CustomerNavBar'
-import CustomerBody from '../../components/customerPageComponents/CustomerBody'
-import CustomerFooter from '../../components/customerPageComponents/CustomerFooter'
-
+import CustomerNavBar from '../../components/customerPageComponents/customerNav/CustomerNavBar'
+import CustomerBody from '../../components/customerPageComponents/customerBody/CustomerBody'
+import CustomerFooter from '../../components/customerPageComponents/customerFooter/CustomerFooter'
+import './CustomerPage.css'
 function CustomerPage() {
   return (
-    <div>
+    <div className='background'>
       <CustomerNavBar />
       <CustomerBody />
       <CustomerFooter />

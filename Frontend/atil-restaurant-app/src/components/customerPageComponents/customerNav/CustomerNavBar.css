@@ -1,0 +1,52 @@
+.custNavOuterContainer{
+    border:1px solid black ;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+.custatilLogo{
+    border-radius: 50%;
+   width: 200px;
+    height: 100%;
+    /* border: 3px solid rgb(27, 201, 94); */
+}
+
+.imageStyle{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.cust-nav-links{
+    /* border: 1px solid blue; */
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cust-clickBtn{
+    background-color: #040434;
+    color: rgb(216, 207, 100);
+    border: none;
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: 1.2rem;
+       min-width:180px;
+    padding:15px;
+    border:1px solid rgb(186, 11, 11);
+    border-radius: 40px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.cust-clickBtn:hover{
+    background-color: #101087;
+    text-decoration: underline;
+   
+  
+}
