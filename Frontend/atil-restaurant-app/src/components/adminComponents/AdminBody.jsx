@@ -52,6 +52,19 @@ const handleItemUpdated = (updatedItem) => {
 };
 
 
+const handleDeleteItem = async (id) => {
+    const confirmDelete = window.confirm("Do you really want to delete this item?");
+    if (confirmDelete) {
+        try {
+            await axios.delete(`http://localhost:3000/menu/delete/${id}`);
+            setItems((prevItems) => prevItems.filter(item => item._id !== id));
+        } catch (error) {
+            console.error("Error deleting item:", error);
+            setError("Could not delete the item.");
+        }
+    }
+};
+
 
   //useEffect that is called on any state change
 useEffect(() => {
@@ -90,7 +103,7 @@ useEffect(() => {
     <p className='pstyle'>{item.itemName}</p> 
     <p className='twinbtn'>
 <button className='twinBtnStyl' onClick={() => handleEditItemClick(item)}  >Edit</button>
-<button className='twinBtnStyl'>Delete</button>
+<button className='twinBtnStyl' onClick={() => handleDeleteItem(item._id)} >Delete</button>
 </p>
 </div>
     ))
