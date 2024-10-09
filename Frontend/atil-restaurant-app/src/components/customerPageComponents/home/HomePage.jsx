@@ -3,7 +3,10 @@ import './HomePage.css'
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <div className='homeContainer'>
+
+
+    </div>
   )
 }
 

@@ -1,0 +1,10 @@
+.contactForm{
+    width: 400px;
+    height: 410px;
+    margin: auto;
+}
+
+.contactHeading{
+    text-align: center;
+    margin: 20px;
+}
