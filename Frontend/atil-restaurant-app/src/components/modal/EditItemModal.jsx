@@ -45,8 +45,9 @@ function EditItemModal({item, onClose, onItemUpdated}) {
                     'Content-Type': 'multipart/form-data',
                 },
             });
-            console.log(response.data.result)
-            onItemUpdated(response.data.result); // Call the parent function to update the item in the list
+            console.log('updated items are')
+            console.log(response.data)
+            onItemUpdated(response.data); // Call the parent function to update the item in the list
             onClose(); // Close the modal
             
         } catch (error) {

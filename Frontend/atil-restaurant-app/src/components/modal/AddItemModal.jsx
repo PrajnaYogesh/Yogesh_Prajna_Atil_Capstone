@@ -5,8 +5,8 @@ import { getItem , KEY_ACCESS_TOKEN} from '../../utils/localStorageManager';
 import { useNavigate } from "react-router-dom";
 
 // 
-// function AddItemModal({onClose, onItemAdded}) {
-  function AddItemModal({onClose}) {
+function AddItemModal({onClose, onItemAdded}) {
+  // function AddItemModal({onClose}) {
 
     const [itemName, setItemName] = useState('');
     const [itemDescription, setItemDescription] = useState('');
@@ -34,8 +34,8 @@ import { useNavigate } from "react-router-dom";
             'Content-Type': 'multipart/form-data', // Important for file uploads
           },
         });
-        // console.log(response.data.result)
-        // onItemAdded(response.data.result); // Assuming the backend returns the new item\
+        console.log(response.data.result)
+        onItemAdded(response.data); // Assuming the backend returns the new item\
         onClose(); 
        
         navigate("/admin/dashboard", { replace: true });

@@ -3,6 +3,7 @@ import './AdminBody.css'
 import axios from 'axios';
 import AddItemModal from '../modal/AddItemModal';
 import EditItemModal from '../modal/EditItemModal';
+import { getItem, KEY_ACCESS_TOKEN } from '../../utils/localStorageManager';
 
 function AdminBody() {
 //fetch all the items on page load
@@ -43,11 +44,11 @@ useEffect(()=>{
 //     }
 // };
 
-// const handleAddItem = async(newItem) => {
-//     setItems((prevItems) => [...prevItems, newItem]);
-//     setIsAddModalOpen(false);
-//     // await fetchItems();
-//   };
+const handleAddItem = async(newItem) => {
+    setItems((prevItems) => [...prevItems, newItem]);
+    setIsAddModalOpen(false);
+    
+  };
 
 
 
@@ -58,18 +59,24 @@ useEffect(()=>{
 
 const handleItemUpdated = (updatedItem) => {
     setItems((prevItems) =>
-        prevItems.map((item) => (item._id === updatedItem?.item._id ? updatedItem : item))
+        prevItems.map((item) => (item._id === updatedItem.result.item._id ? updatedItem.result.item : item))
     );
     setIsEditModalOpen(false); // Close modal after editing
 };
 
 
 const handleDeleteItem = async (id) => {
+    console.log(id)
     const confirmDelete = window.confirm("Do you really want to delete this item?");
     if (confirmDelete) {
         try {
+            const accessToken = getItem(KEY_ACCESS_TOKEN);
+              axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
             await axios.delete(`http://localhost:3000/menu/delete/${id}`);
-            setItems((prevItems) => prevItems.filter(item => item._id !== id));
+
+            // setItems((prevItems) => prevItems.filter(item => item._id !== id));
+            setItems(items.filter(items => items._id !== id));
+
         } catch (error) {
             console.error("Error deleting item:", error);
             setError("Could not delete the item.");
@@ -95,7 +102,7 @@ useEffect(() => {
 {isAddModalOpen && (
         <AddItemModal 
           onClose={() => setIsAddModalOpen(false)}
-        //   onItemAdded={handleAddItem} 
+          onItemAdded={handleAddItem} 
         />
       )}
 
