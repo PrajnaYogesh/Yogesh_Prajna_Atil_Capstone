@@ -33,13 +33,25 @@ useEffect(()=>{
     fetchItems();
 },[])
 
-const handleAddItem = (newItem) => {
-    setItems((prevItems) => [...prevItems, newItem]);
-    setIsAddModalOpen(false);
-  };
+
+// const fetchItems = async () => {
+//     try {
+//         const response = await axios.get('http://localhost:3000/menu/');
+//         setItems(response.data.result);
+//     } catch (error) {
+//         setError(error.message);
+//     }
+// };
+
+// const handleAddItem = async(newItem) => {
+//     setItems((prevItems) => [...prevItems, newItem]);
+//     setIsAddModalOpen(false);
+//     // await fetchItems();
+//   };
 
 
-  const handleEditItemClick = (item) => {
+
+  const handleEditItemClick = async(item) => {
     setSelectedItem(item);
     setIsEditModalOpen(true);
 };
@@ -83,7 +95,7 @@ useEffect(() => {
 {isAddModalOpen && (
         <AddItemModal 
           onClose={() => setIsAddModalOpen(false)}
-          onItemAdded={handleAddItem} 
+        //   onItemAdded={handleAddItem} 
         />
       )}
 

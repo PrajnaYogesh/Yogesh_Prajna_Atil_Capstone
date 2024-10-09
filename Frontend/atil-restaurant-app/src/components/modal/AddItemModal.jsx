@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import './AddItemModal.css'
 import { getItem , KEY_ACCESS_TOKEN} from '../../utils/localStorageManager';
+import { useNavigate } from "react-router-dom";
 
 // 
-function AddItemModal({onClose, onItemAdded}) {
+// function AddItemModal({onClose, onItemAdded}) {
+  function AddItemModal({onClose}) {
 
     const [itemName, setItemName] = useState('');
     const [itemDescription, setItemDescription] = useState('');
@@ -12,6 +14,7 @@ function AddItemModal({onClose, onItemAdded}) {
     const [category, setCategory] = useState('drinks');
     const [type, setType] = useState('veg');
     const [itemImage, setItemImage] = useState(null);
+    const navigate = useNavigate();
 
     const handleSubmit = async(e) =>{
         e.preventDefault();
@@ -31,9 +34,17 @@ function AddItemModal({onClose, onItemAdded}) {
             'Content-Type': 'multipart/form-data', // Important for file uploads
           },
         });
-        console.log(response.data.result)
-        onItemAdded(response.data.result); // Assuming the backend returns the new item
+        // console.log(response.data.result)
+        // onItemAdded(response.data.result); // Assuming the backend returns the new item\
         onClose(); 
+       
+        navigate("/admin/dashboard", { replace: true });
+             //   if (response.data.result) {
+      //     onItemAdded(response.data.result); // Pass the new item to the parent
+      //     onClose(); // Close the modal only after successfully adding the item
+      //     navigate("/admin/dashboard", { replace: true });
+      // }
+
     }
     catch(error){
         console.error('Error adding item:', error);
@@ -94,8 +105,8 @@ function AddItemModal({onClose, onItemAdded}) {
             required
           />
 
-<button type="submit">Save</button>
-          <button type="button" onClick={onClose}>Cancel</button>
+<button className='cnfrmBtn' type="submit">Save</button>
+          <button className='cnfrmBtn' type="button" onClick={onClose}>Cancel</button>
 </form>
 </div>
     </div>

@@ -84,8 +84,8 @@ function EditItemModal({item, onClose, onItemUpdated}) {
 
   <label> Item Image: <input type="file" onChange={(e) => setItemImage(e.target.files[0])} /> </label>                                
 
-  <button type="submit">Save</button>
-  <button type="button" onClick={onClose}>Cancel</button>
+  <button className='cnfrmBtn' type="submit">Save</button>
+  <button className='cnfrmBtn' type="button" onClick={onClose}>Cancel</button>
 
 </form>
 

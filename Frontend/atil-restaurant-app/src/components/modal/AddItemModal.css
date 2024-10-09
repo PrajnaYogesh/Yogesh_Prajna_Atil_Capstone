@@ -13,6 +13,7 @@
     width: 400px;
     height: 600px;
     margin: auto;
+    border-radius: 8px;
   }
   
   .modal-content {
@@ -22,3 +23,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
+  .cnfrmBtn{
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    
+  }

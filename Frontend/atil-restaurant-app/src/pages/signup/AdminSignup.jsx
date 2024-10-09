@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import './AdminSignup.css'
 import axios from 'axios';
 
@@ -18,6 +18,8 @@ try {
     password,
 });
 console.log(result)
+
+
 
 } catch (error) {
   console.log(error)
