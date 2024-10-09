@@ -41,16 +41,18 @@ try {
 
   return (
     <div className='cartOuterContainer'>
-      <h2>Your Cart</h2>
+      <div className="cartInnerContainer">
+      <h2 className='checkoutHeading'>Checkout Cart</h2>
       {cart.items.map((item, index) => (
-        <div key={index}>
+        <div className='itemCheckoutList' key={index}>
           <p>{item.itemName}</p>
           <p>Quantity: {item.quantity}</p>
           <p>Price: {item.pricePerItem}</p>
         </div>
       ))}
-      <h3>Total Amount: {cart.totalAmount}</h3>
-      <button onClick={handleCheckout}>Checkout</button>
+      <h3 className='amount'>Total Amount: {cart.totalAmount}</h3>
+      <button className='checkout-btn' onClick={handleCheckout}>Checkout</button>
+      </div>
     </div>
   )
 }

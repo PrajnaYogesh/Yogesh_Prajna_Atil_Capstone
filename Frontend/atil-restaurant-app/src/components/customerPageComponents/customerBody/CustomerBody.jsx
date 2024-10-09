@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 function CustomerBody() {
   return (
-    <div>
+    <div className='bodyHeight'>
 <Outlet />
 
     </div>

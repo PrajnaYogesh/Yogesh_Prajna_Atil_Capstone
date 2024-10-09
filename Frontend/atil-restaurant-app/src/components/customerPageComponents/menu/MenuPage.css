@@ -44,7 +44,7 @@
 }
 
 .menuContainer{
-    height: 350px;
+    /* height: 350px; */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -54,7 +54,7 @@
 .eachItemContainer{
     border: 2px solid brown;
     width: 30%;
-    height: 35%;
+    height: 140px;
     display: flex;
 }
 
