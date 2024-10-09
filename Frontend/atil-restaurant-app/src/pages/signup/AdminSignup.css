@@ -52,8 +52,8 @@ input{
 }
 
 .submit:hover{
-    background-color: #101087;
-  
+    /* background-color: #101087; */
+  text-decoration: underline;
 }
 
 .subheading{

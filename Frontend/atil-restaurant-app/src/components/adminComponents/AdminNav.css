@@ -5,13 +5,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 30px;
+    background-color: #040434;
 }
 
 .atilLogo{
     border-radius: 50%;
    width: 200px;
     height: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .imageStyle{
@@ -20,22 +21,26 @@
     border-radius: 50%;
 }
 
-.clickBtn{
+.clickBtn1{
     background-color: #040434;
     color: rgb(216, 207, 100);
     border: none;
-    margin-top: 16px;
+    /* margin-top: 16px; */
     font-weight: bold;
-    font-size: medium;
-
+    font-size: 1.8rem;
     min-width:200px;
     padding:15px;
-    border:1px solid black;
+    /* border:1px solid black; */
     border-radius: 40px;
 
 }
 
-.clickBtn:hover{
-    background-color: #101087;
+.clickBtn1:hover{
+   text-decoration: underline;
   
+}
+
+.nameH{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+color:rgb(216, 207, 100);
 }

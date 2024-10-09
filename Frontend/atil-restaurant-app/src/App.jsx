@@ -8,7 +8,7 @@ import AdminDashboard from './pages/adminDashboard/AdminDashboard';
 import MenuPage from './components/customerPageComponents/menu/MenuPage'
 import ContactUs from './components/customerPageComponents/contact/ContactUs'
 import CheckoutPage from './components/customerPageComponents/checkout/CheckoutPage'
-import HomePage from './components/customerPageComponents/Home/HomePage';
+import HomePage from './components/customerPageComponents/home/HomePage';
 
 
 function App() {

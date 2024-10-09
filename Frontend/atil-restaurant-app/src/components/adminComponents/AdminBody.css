@@ -9,33 +9,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding-bottom: 10px;
 }
 
 
 .clickBtn{
-    background-color: #040434;
-    color: rgb(216, 207, 100);
+    background-color: rgb(216, 207, 100);
+    color: #040434;
     border: none;
-    margin-top: 16px;
+    /* margin-top: 16px; */
     font-weight: bold;
-    font-size: medium;
+    font-size: 1.2rem;
 
     min-width:200px;
     padding:15px;
-    border:1px solid black;
-    border-radius: 40px;
+    /* border:1px solid black; */
+    /* border-radius: 40px; */
     
     
 }
 
 .clickBtn:hover{
-    background-color: #101087;
+    /* background-color: #101087; */
+    color: #3333ce;
   
 }
 
 .itemsOuterContainer{
-    border: 2px solid rgb(182, 27, 53);
+    /* border: 2px solid rgb(182, 27, 53); */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -44,7 +45,8 @@
 }
 
 .eachItem{
-    border: 1px solid #040434;
+    border: 1px solid #040434; /* Border color and width */
+    box-shadow: 0 4px 10px rgba(4, 4, 52, 0.5); /* Shadow effect */
     width: 20%;
     margin: 10px 20px;
     display: flex;
@@ -83,6 +85,7 @@
 }
 
 .twinBtnStyl:hover{
-    background-color: #101087;
+    /* background-color: #101087; */
+    text-decoration: underline;
     
 }

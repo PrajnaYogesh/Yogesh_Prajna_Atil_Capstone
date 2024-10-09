@@ -1,46 +1,50 @@
 .menuOuterContainer{
     width: 100vw;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     /* margin: 10px; */
 }
 
 .menuButtonsContainer{
     width: 40%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 50px;
    margin: auto;
    display: flex;
     justify-content: center;
- column-gap: 10px;
+ column-gap: 1px;
 }
 
 
 .cust-menuBtn{
-    background-color: #040434;
-    color: rgb(216, 207, 100);
+    background-color: rgb(216, 207, 100);
+    color: #040434;
     border: none;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
        min-width:120px;
     padding:15px;
-    border:1px solid rgb(186, 11, 11);
+    /* border:1px solid rgb(186, 11, 11); */
     /* border-radius: 40px; */
     text-align: center;
     text-decoration: none;
     
 }
 
-.eachItemsOuterContainer{
-    border: 2px solid black;
+.cust-menuBtn:hover{
+    color: #3333ce;
 }
 
+
 .menuHeadingStyle{
-    border: 2px solid rgb(212, 18, 50);
+    /* border: 2px solid rgb(212, 18, 50); */
     padding: 10px;
     font-size: 1.5rem;
     text-align: center;
     color:#040434;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    
 }
 
 .menuContainer{
@@ -52,10 +56,12 @@
 }
 
 .eachItemContainer{
-    border: 2px solid brown;
+    border: 1px solid #040434; /* Border color and width */
+    box-shadow: 0 4px 10px rgba(4, 4, 52, 0.5); /* Shadow effect */
     width: 30%;
-    height: 140px;
+    height: 200px;
     display: flex;
+    margin-bottom: 10px;
 }
 
 .itemImageStyle{

@@ -1,3 +1,52 @@
-.homeContainer{
-    height: 65vh;
-}
+.homeContainer {
+    width: 100%; /* Full width of the parent */
+     max-width: 100%; /*Set a max width if needed */
+    margin: 0 auto; /* Center it */
+    height: 75vh; /* Set height to 65vh */
+    overflow: hidden; /* Prevent overflow */
+    position: relative; /* For positioning of carousel controls */
+    /* font-size: 2rem; */
+  }
+  
+  .carousel {
+    max-width: 100%; /* Ensure carousel does not overflow */
+    height: 100%; /* Fill the height of the container */
+  }
+  
+  .carousel img {
+    width: 100%; /* Make sure images take full width of the carousel */
+    height: 100%; /* Fill the height of the carousel */
+    object-fit: contain; /* Maintain aspect ratio and cover the area */
+  }
+
+  .carousel-caption {
+    position: absolute; /* Position the caption absolutely */
+    top: 35%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center */
+    color: #040434; /* Text color */
+    text-align: center; /* Center text */
+    /* background: rgba(0, 0, 0, 0.5); Semi-transparent background for better visibility */
+    padding: 15px; /* Add some padding */
+    border-radius: 5px; /* Optional: round the corners */
+    
+  }
+  
+  .carousel-caption h5 {
+    margin: 0; /* Remove margin from heading */
+  }
+  
+  .carousel-caption p {
+    margin: 0; /* Remove margin from paragraph */
+    font-size: 1.4rem; /* Adjust font size for the slogan */
+  }
+  
+  .carousel-caption i {
+    font-size:1.4rem; /* Adjust icon size */
+    margin-left: 0.5rem; /* Space between text and icon */
+  }
+
+  .nameH{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  }
+  

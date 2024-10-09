@@ -1,5 +1,5 @@
 .cartOuterContainer{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 40%;
     height:470px;
     margin: auto;
@@ -8,15 +8,18 @@
 
 .cartInnerContainer{
     margin: 40px;
-    border: 1px solid green;
+    border:1px solid #040434; /* Border color and width */
+    box-shadow: 0 4px 10px rgba(4, 4, 52, 0.5); /* Shadow effect */
+    
     height: 70%;
     text-align: center;
 }
 
 .checkoutHeading{
-    border: 1px solid rgb(5, 5, 5);
+    /* border: 1px solid rgb(5, 5, 5); */
     margin-bottom: 10px;
     padding:15px;
+    border-bottom: 1px solid #040434;;
 }
 
 .itemCheckoutList{
@@ -44,7 +47,7 @@
     font-size: 0.8rem;
        min-width:120px;
     padding:10px;
-    border:1px solid rgb(186, 11, 11);
+    /* border:1px solid rgb(186, 11, 11); */
     /* border-radius: 40px; */
     text-align: center;
     text-decoration: none;

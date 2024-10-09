@@ -5,14 +5,18 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(228, 222, 222, 0.5); */
+    background-color: rgb(177, 173, 173);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 400px;
+    height: 600px;
+    margin: auto;
   }
   
   .modal-content {
-    background: white;
+    /* background: white; */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
