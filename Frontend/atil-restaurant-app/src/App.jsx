@@ -12,9 +12,7 @@ import HomePage from './components/customerPageComponents/home/HomePage';
 
 
 function App() {
-  
-
-  return (
+    return (
     <div className='outerContainer'>
     <Routes> 
     <Route path="/" element={<CustomerPage />}>
